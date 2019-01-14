@@ -222,6 +222,12 @@ $(document).ready(function () {
 </div>
 <div id="multiple-linear-regression" class="section level2">
 <h2>3.2 Multiple Linear Regression</h2>
+<ul>
+<li><span class="math inline">\(Y=\beta_0+\beta_1X_1+\cdots+\beta_pX_P+\epsilon\)</span>.<br> 类似的有，RSS = <span class="math inline">\(\sum\limits_{i=1}^n(y_i - \hat{y}_i)^2 = \sum\limits_{i=1}^n(y_i-\hat{\beta}_0-\hat{\beta}_1x_{i1}-\cdots-\hat{\beta}_px_{ip})^2\)</span>.</li>
+<li>Null hypothesis <span class="math inline">\(H_0: \beta_1=\beta_2=\cdots=\beta_p=0\)</span> <br> 用<strong>F-statistic</strong>检验: <span class="math inline">\(F=\frac{(TSS-RSS)/p}{RSS/(n-p-1)}\)</span>.<br> 若<span class="math inline">\(H_0\)</span>成立，<span class="math inline">\(F \approx 1\)</span>; 反之若<span class="math inline">\(H_a\)</span>成立，<span class="math inline">\(F &gt; 1\)</span>.</li>
+<li>那么<span class="math inline">\(F\)</span>多大才够大呢？或者，如果<span class="math inline">\(F \approx 1\)</span>,是否<span class="math inline">\(H_0\)</span>一定不成立呢？这取决于<span class="math inline">\(n\)</span>和<span class="math inline">\(p\)</span>的值。 若<span class="math inline">\(n\)</span>很大，F比1大一点就可以拒绝<span class="math inline">\(H_0\)</span>；反之，若<span class="math inline">\(n\)</span>小，<span class="math inline">\(F\)</span>就必须大。</li>
+<li>若检验其中q个系数为0，<span class="math inline">\(H_0: \beta_{p-q+1}=\beta_{p-q+2}=\cdots=\beta_p=0\)</span>. 这样用剩下来<span class="math inline">\(p-q+1\)</span>个系数拟合的模型得到的residual sum of squares是RSS<span class="math inline">\(_0\)</span>. 此时<span class="math inline">\(F=\frac{(RSS_0-RSS)/q}{RSS/(n-p-1)}\)</span>.</li>
+</ul>
 </div>
 
 

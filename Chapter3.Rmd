@@ -64,7 +64,14 @@ $R^2$越接近1，regression描述得越好。<br>
 
 
 ## 3.2 Multiple Linear Regression
-
-
-
+* $Y=\beta_0+\beta_1X_1+\cdots+\beta_pX_P+\epsilon$.<br>
+类似的有，RSS = $\sum\limits_{i=1}^n(y_i - \hat{y}_i)^2 = \sum\limits_{i=1}^n(y_i-\hat{\beta}_0-\hat{\beta}_1x_{i1}-\cdots-\hat{\beta}_px_{ip})^2$.
+* Null hypothesis $H_0: \beta_1=\beta_2=\cdots=\beta_p=0$ <br>
+  用**F-statistic**检验: $F=\frac{(TSS-RSS)/p}{RSS/(n-p-1)}$.<br>
+  若$H_0$成立，$F \approx 1$; 反之若$H_a$成立，$F > 1$.
+* 那么$F$多大才够大呢？或者，如果$F \approx 1$,是否$H_0$一定不成立呢？这取决于$n$和$p$的值。
+若$n$很大，F比1大一点就可以拒绝$H_0$；反之，若$n$小，$F$就必须大。
+* 若检验其中q个系数为0，$H_0: \beta_{p-q+1}=\beta_{p-q+2}=\cdots=\beta_p=0$.
+这样用剩下来$p-q+1$个系数拟合的模型得到的residual sum of squares是RSS$_0$.
+此时$F=\frac{(RSS_0-RSS)/q}{RSS/(n-p-1)}$.
 
